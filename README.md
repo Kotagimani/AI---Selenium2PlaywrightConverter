@@ -26,18 +26,18 @@ The system follows the **A.N.T.** (Architecture, Navigation, Tools) pattern.
 
 ```mermaid
 graph TD
-    subgraph "Layer 1: User Interface"
+    subgraph Layer1 [Layer 1: User Interface]
         UI[Browser Frontend]
         HTML[index.html / style.css]
         JS[script.js]
     end
 
-    subgraph "Layer 2: Navigation (API)"
+    subgraph Layer2 [Layer 2: Navigation API]
         API[FastAPI Server]
-        LiteAPI[Simple Server (Fallback)]
+        LiteAPI[Simple Server Fallback]
     end
 
-    subgraph "Layer 3: Tools (Logic)"
+    subgraph Layer3 [Layer 3: Tools Logic]
         Engine[converter.py]
         Regex[Heuristic Rules]
     end
