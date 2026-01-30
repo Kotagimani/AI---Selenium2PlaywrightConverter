@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium 2 Playwright</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="icon">🚀</span>
+                <h1>S2P Converter</h1>
+            </div>
+            <div class="actions">
+                <button id="convertBtn" class="primary-btn">
+                    <span>Convert Code</span>
+                    <span class="shortcut">⌘ Enter</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="editor-grid">
+            <div class="panel source-panel">
+                <div class="panel-header">
+                    <span class="badge java">Java / Selenium</span>
+                    <div class="panel-actions">
+                        <button class="icon-btn" onclick="copyToClipboard('input')">📋</button>
+                    </div>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="javaInput" placeholder="// Paste your Selenium Java code here...
+public class LoginTest { ... }" spellcheck="false"></textarea>
+                </div>
+            </div>
+
+            <div class="panel target-panel">
+                <div class="panel-header">
+                    <span class="badge ts">TypeScript / Playwright</span>
+                    <div class="panel-actions">
+                        <button class="icon-btn" onclick="copyToClipboard('output')">📋</button>
+                        <button class="icon-btn" id="saveBtn">💾 Save</button>
+                    </div>
+                </div>
+                <div class="editor-wrapper">
+                    <div id="tsOutput" class="code-view" contenteditable="true"></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Phase 0 Prototype • B.L.A.S.T. Architecture</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
